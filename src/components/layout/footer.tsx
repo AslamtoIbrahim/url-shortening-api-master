@@ -9,12 +9,12 @@ function Footer({ className, ...props }: FooterProps) {
   return (
     <footer
       className={cn(
-        "bg-foreground text-muted-foreground py-16",
+        "bg-foreground text-muted-foreground py-16 ",
         className
       )}
       {...props}
     >
-      <div className="container mx-auto flex flex-col items-center gap-12 text-center md:flex-row md:items-start md:justify-between md:text-left">
+      <div className="container mx-auto max-w-7xl flex flex-col items-center gap-12 text-center md:flex-row md:items-start md:justify-between md:text-left">
 
         {/* Logo */}
         <h2 className="text-3xl font-bold text-background">

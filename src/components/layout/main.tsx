@@ -8,58 +8,90 @@ type MainProps = React.ComponentProps<'main'> & { className?: string; }
 
 
 function Main({ className, ...props }: MainProps) {
-  return <main className={cn('py-4', className)} {...props}>
-    <section className="overflow-x-hidden  flex flex-col md:flex-row-reverse gap-8 md:gap-x-12 ml-6">
-      <div className="w-114 h-80 md:w-120 md:h-96 pl-4" >
-        <img src="/public/images/illustration-working.svg" alt="working" />
-      </div>
-      <div className="text-center md:text-start space-y-6 px-4 pb-32">
-        <h1 className="text-4xl lg:text-5xl font-sans font-black">More than just shorter links</h1>
-        <p className="text-foreground/50 font-medium">
-          Build your brand’s recognition and get detailed insights
-          on how your links are performing.
-        </p>
+  return <main className={cn('', className)} {...props}>
+    <section className="overflow-hidden">
+      <div className="mx-auto max-w-7xl px-6 py-2 pb-30">
+        <div className="flex flex-col-reverse items-center gap-12 md:flex-row">
 
-        <Button className="rounded-3xl text-lg px-8 py-6 font-semibold">
-          Get Started
-        </Button>
+          {/* TEXT */}
+          <div className="w-full md:w-1/2 text-center md:text-left space-y-6">
+            <h1 className="text-4xl font-black lg:text-5xl">
+              More than just shorter links
+            </h1>
+            <p className="text-foreground/50 max-w-md mx-auto md:mx-0">
+              Build your brand’s recognition and get detailed insights
+              on how your links are performing.
+            </p>
+            <Button className="rounded-3xl px-8 py-6 text-lg font-semibold">
+              Get Started
+            </Button>
+          </div>
+
+          {/* IMAGE */}
+          <div className="w-full md:w-1/2">
+            <img
+              src="/public/images/illustration-working.svg"
+              alt="working"
+              className="w-full max-w-none md:translate-x-24"
+            />
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <section className="bg-foreground/10 pt-32 relative">
-      <section className="absolute m-auto -top-20  w-full">
+
+    <section className="bg-foreground/10 pt-16 relative">
+      <section className="absolute left-1/2 -translate-x-1/2 -top-20 lg:-top-16 w-full max-w-7xl px-6">
         <ShortenCard />
       </section>
-      <div className="text-center space-y-6 px-4 pb-22">
-        <h2 className="text-2xl font-sans font-black">Advanced Statistics</h2>
-        <p className="text-foreground/50 font-medium md:w-md md:m-auto">
-          Track how your links are performing across the web with our
-          advanced statistics dashboard.
-        </p>
-        <div className="flex flex-col gap-24 mt-16 md:flex-row md:gap-12 md:w-full md:justify-center">
-          <StaticsCard
-            className="relative z-20"
-            src="/public/images/icon-brand-recognition.svg"
-            title="Brand Recognition"
-            description=" Boost your brand recognition with each click. Generic links don’t 
-                         mean a thing. Branded links help instil confidence in your content." />
-          <div className="relative">
-            <div className="absolute md:hidden w-2 h-20 bg-primary -top-26 left-1/2 -translate-x-1/2" />
-            {/* <div className="hidden md:absolute w-120 h-2 bg-primary top-1/2 -translate-y-1/2 " /> */}
+
+      <div className=" py-24 px-4">
+        <div className="mx-auto max-w-6xl text-center space-y-6">
+          <h2 className="text-3xl font-black">
+            Advanced Statistics
+          </h2>
+
+          <p className="mx-auto max-w-md text-foreground/50">
+            Track how your links are performing across the web with our
+            advanced statistics dashboard.
+          </p>
+
+          {/* Cards wrapper */}
+          <div className="relative mt-20 flex flex-col items-center gap-20 md:flex-row md:gap-10">
+
+            {/* LINE */}
+            <div
+              className="
+          absolute
+          bg-primary
+          w-2 h-full
+          md:h-2 md:w-full
+          md:top-1/2 md:-translate-y-1/2
+        "
+            />
 
             <StaticsCard
-              className="mt-12"
-              src="/public/images/icon-detailed-records.svg"
-              title="Detailed Records"
-              description="Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions." />
+              src="/images/icon-brand-recognition.svg"
+              title="Brand Recognition"
+              description="Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content."
+            />
 
-            <div className="absolute md:hidden w-2 h-20 bg-primary -bottom-20 left-1/2 -translate-x-1/2" />
+            <StaticsCard
+              className="md:mt-12"
+              src="/images/icon-detailed-records.svg"
+              title="Detailed Records"
+              description="Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions."
+            />
+
+            <StaticsCard
+              className="md:mt-24"
+              src="/images/icon-fully-customizable.svg"
+              title="Fully Customizable"
+              description="Improve brand awareness and content discoverability through customizable links, supercharging audience engagement."
+            />
+
           </div>
-          <StaticsCard
-            className="mt-24"
-            src="/public/images/icon-fully-customizable.svg"
-            title="Fully Customizable"
-            description="Improve brand awareness and content discoverability through customizable links, supercharging audience engagement." />
         </div>
       </div>
       <BootsCard />

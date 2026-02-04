@@ -7,7 +7,7 @@ type HeaderProps = React.ComponentProps<'header'> & { className?: string; }
 
 
 function Header({ className, ...props }: HeaderProps) {
-  return <header className={cn('p-4 md:p-8 flex items-center justify-between md:justify-start md:gap-4', className)} {...props}>
+  return <header className={cn('p-4 max-w-7xl mx-auto md:p-8 flex items-center justify-between md:justify-start md:gap-4', className)} {...props}>
     <Logo />
     <nav className="hidden md:flex md:justify-between w-full">
       <div>
