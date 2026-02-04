@@ -2,13 +2,11 @@ import { Button } from "@/components/ui/button"
 
 import {
     Sheet,
-    SheetClose,
     SheetContent,
-    SheetDescription,
     SheetFooter,
     SheetHeader,
     SheetTitle,
-    SheetTrigger,
+    SheetTrigger
 } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
 
