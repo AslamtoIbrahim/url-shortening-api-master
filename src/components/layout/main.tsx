@@ -30,7 +30,7 @@ function Main({ className, ...props }: MainProps) {
           {/* IMAGE */}
           <div className="w-full md:w-1/2">
             <img
-              src="/public/images/illustration-working.svg"
+              src="/images/illustration-working.svg"
               alt="working"
               className="w-full max-w-none md:translate-x-24"
             />
