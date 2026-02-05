@@ -5,7 +5,7 @@ type LogoProps = React.ComponentProps<'div'> & { className?: string;}
 
 function Logo({ className, ...props }: LogoProps) {
   return <div className={cn('', className)} {...props}>
-    <img className="w-24 md:w-auto" src="/public/images/logo.svg" alt="" />
+    <img className="w-24 md:w-auto" src="/images/logo.svg" alt="" />
 </div>
 }
 
